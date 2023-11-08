@@ -1,4 +1,4 @@
-# bun-service
+# bun-service template
 
 To install dependencies:
 
