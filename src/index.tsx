@@ -7,10 +7,11 @@ const app = new Hono();
 
 app.use('*', async (c, next) =>
 {
-    const start = Date.now();
+    const start = Bun.nanoseconds();
     await next();
-    const end = Date.now();
-    c.res.headers.set('X-Response-Time', `${end - start}`);
+    const end = Bun.nanoseconds();
+    c.res.headers.set('X-Response-Time', `${(end - start) / 1000000}`);
+    c.res.headers.set('Server', 'bun-service');
 });
 
 await parseRoutes('routes', app);
