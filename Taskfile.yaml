@@ -7,7 +7,7 @@ tasks:
   run:
     cmds:
       - cmd: |
-          bun --watch src/index.ts
+          bun --watch src/index.tsx
 
   docker-run:
     cmds:
