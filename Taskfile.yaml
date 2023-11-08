@@ -1,0 +1,20 @@
+version: '3'
+
+vars:
+  TAG: gedankrayze/bun-service
+
+tasks:
+  run:
+    cmds:
+      - cmd: |
+          bun --watch src/index.ts
+
+  docker-run:
+    cmds:
+      - cmd: |
+          docker run --rm -it -p 8080:3000 {{.TAG}}
+
+  docker-build:
+    cmds:
+      - cmd: |
+          docker build --pull -t {{.TAG}} .

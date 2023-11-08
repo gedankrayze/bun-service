@@ -1,0 +1,18 @@
+{
+  "name": "bun-service",
+  "module": "src/index.ts",
+  "type": "module",
+  "devDependencies": {
+    "bun-types": "latest",
+    "@types/react-dom": "^18.2.15",
+    "react-refresh": "^0.14.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "hono": "^3.9.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
