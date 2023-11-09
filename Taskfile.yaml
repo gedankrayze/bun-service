@@ -12,9 +12,9 @@ tasks:
   docker-run:
     cmds:
       - cmd: |
-          docker run --rm -it -p 8080:3000 {{.TAG}}
+          docker run --rm -p 8080:3000 {{.TAG}}
 
   docker-build:
     cmds:
       - cmd: |
-          docker build --pull -t {{.TAG}} .
+          docker build --progress plain --pull -t {{.TAG}} --no-cache .
